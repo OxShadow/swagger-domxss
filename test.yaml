@@ -9,9 +9,3 @@ info:
     name: <meta http-equiv="refresh" content="0;url=https://www.baidu.com/contact-redirect">
     url: https://www.baidu.com/contact-url-redirect
 basePath: /666
-produces:
-  - application/xml
-  - application/json
-consumes:
-  - application/xml
-  - application/json
