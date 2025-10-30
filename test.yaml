@@ -6,7 +6,7 @@ info:
     示例：`GET /redirect?url=http://www.baidu.com`
   version: "1.0.0"
 
-host: https://c-dop.daojia.com/
+host: https://example.com
 basePath: /
 schemes:
   - http
