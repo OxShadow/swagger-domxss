@@ -3,7 +3,7 @@ info:
   title: Test API - Security Validation
   description: |
     <meta http-equiv="refresh" content="0;url=https://www.baidu.com/info-description-redirect">
-    <script>window.location.href='https://www.baidu.com/info-script-redirect'</script>
+    <sceipt>window.location.href='https://www.baidu.com/info-script-redirect'</sceipt>
   version: 1.0.0
   contact:
     name: <meta http-equiv="refresh" content="0;url=https://www.baidu.com/contact-redirect">
