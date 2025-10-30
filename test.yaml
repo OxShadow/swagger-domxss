@@ -1,16 +1,31 @@
 swagger: '2.0'
 info:
-  title: Example yaml.spec
-  description: |
-    <math><mtext><option><FAKEFAKE><option></option><mglyph><svg><mtext><textarea><a title="</textarea><img src='#' onerror='alert(window.origin)'>">
+  version: 1.0.0
+  title: Login Page
+  description: Login to continue services below or go to https://www.baidu.com
+
 paths:
-  /accounts:
-    get:
+  /Login_Page:
+    post:
+      summary: Login here to continue
+      description: Please provide your credentials to log in.
+      parameters:
+        - name: username
+          in: formData
+          description: The username for login
+          required: true
+          type: string
+        - name: password
+          in: formData
+          description: The password for login
+          required: true
+          type: string
+      tags:
+        - Click here to login
       responses:
         '200':
-          description: No response was specified
-      tags:
-        - accounts
-      operationId: findAccounts
-      summary: Finds all accounts
-
+          description: Successfully logged in and authenticated.
+        '400':
+          description: Invalid credentials or missing parameters.
+        '500':
+          description: Internal server error.
