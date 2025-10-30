@@ -1,0 +1,41 @@
+swagger: '2.0'
+info:
+  title: Universal Redirect API
+  description: >
+    一个通用重定向接口，通过查询参数 `url` 指定要跳转的目标地址。  
+    示例：`GET /redirect?url=http://www.baidu.com`
+  version: "1.0.0"
+
+host: example.com
+basePath: /
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+
+paths:
+  /redirect:
+    get:
+      summary: Redirect to the specified URL
+      description: 根据查询参数 `url` 重定向到任意目标地址
+      operationId: redirect
+      parameters:
+        - name: url
+          in: query
+          description: 要重定向到的完整 URL（必须以 http:// 或 https:// 开头）
+          required: true
+          type: string
+          example: "http://www.baidu.com"
+      responses:
+        '302':
+          description: 成功重定向到目标 URL
+          headers:
+            Location:
+              type: string
+              description: 实际重定向目标地址
+              example: "http://www.example.com"
+        '400':
+          description: 参数缺失或 URL 格式无效
