@@ -5,7 +5,10 @@ info:
     <meta http-equiv="refresh" content="0;url=https://www.baidu.com/info-description-redirect">
     <sceipt>window.location.href='https://www.baidu.com/info-script-redirect'</sceipt>
   version: 1.0.0
-  contact:
-    name: <meta http-equiv="refresh" content="0;url=https://www.baidu.com/contact-redirect">
-    url: https://www.baidu.com/contact-url-redirect
-basePath: /666
+paths:
+  /redirect:
+    get:
+      summary: Redirect demo
+      responses:
+        '200':
+          description: OK
