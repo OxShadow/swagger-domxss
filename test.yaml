@@ -2,30 +2,30 @@ swagger: '2.0'
 info:
   version: 1.0.0
   title: Login Page
-  description: Login to continue services below or go to https://www.baidu.com
+  description: 继续登录或直接访问登录 https://www.baidu.com
 
 paths:
   /Login_Page:
     post:
-      summary: Login here to continue
-      description: Please provide your credentials to log in.
+      summary: 用户登录
+      description: 请输入你的账号密码
       parameters:
         - name: username
           in: formData
-          description: The username for login
+          description: 输入用户账号
           required: true
           type: string
         - name: password
           in: formData
-          description: The password for login
+          description: 输入用户密码
           required: true
           type: string
       tags:
-        - Click here to login
+        - 登录
       responses:
         '200':
-          description: Successfully logged in and authenticated.
+          description: 登陆成功.
         '400':
-          description: Invalid credentials or missing parameters.
+          description: 凭据无效或缺少参数.
         '500':
-          description: Internal server error.
+          description: 登录失败.
